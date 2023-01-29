@@ -67,6 +67,7 @@ public class GICGUI extends Application {
         stocksBtn.setOnAction(new ImageChangeHandlerStocks());
         investmentsBtn.setOnAction(new ImageChangeHandlerInvestments());
 
+        
 
         //Create background fill
         BackgroundFill background_fill = new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY);
@@ -89,7 +90,8 @@ public class GICGUI extends Application {
         VBox vbox = new VBox(20, title, hbox,imageView);  // descriptionArea
         vbox.setAlignment(Pos.TOP_CENTER);
 
-      
+      hbox.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+
         Scene scene = new Scene(vbox,800,800);
 
 
