@@ -73,10 +73,19 @@ public class GICGUI extends Application {
         Text title = new Text("Welcome to the Capital Kids");
         title.setFont(Font.font("Tahoma", FontWeight.BOLD, 25));
 
+        TextArea descriptionArea = new TextArea();
+        descriptionArea.setWrapText(true);
+        descriptionArea.setMaxWidth(600);
+
+
         HBox hbox = new HBox(20, homeBtn, bankImgBtn, loanImgBtn, stocksBtn, investmentsBtn);
-        hbox.setAlignment(Pos.CENTER);
-        VBox vbox = new VBox(20, title, imageView, hbox);
-        vbox.setAlignment(Pos.CENTER);
+        hbox.setAlignment(Pos.BOTTOM_CENTER);
+        VBox vbox = new VBox(20, title, hbox,imageView, descriptionArea);
+        vbox.setAlignment(Pos.TOP_CENTER);
+
+        //change background color
+        vbox.setStyle("-fx-background-color: #FFFFFF;");
+hbox.setStyle("-fx-background-color: #FFFFFF;");
 
         Scene scene = new Scene(vbox,800,800);
 
