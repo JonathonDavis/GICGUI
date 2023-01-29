@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import com.sun.xml.internal.bind.v2.runtime.ClassBeanInfoImpl;
@@ -20,8 +20,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -69,6 +67,14 @@ public class GICGUI extends Application {
         stocksBtn.setOnAction(new ImageChangeHandlerStocks());
         investmentsBtn.setOnAction(new ImageChangeHandlerInvestments());
 
+
+        //Create background fill
+        BackgroundFill background_fill = new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY);
+
+        //create background
+        Background background = new Background(background_fill);
+
+
         //Title
         Text title = new Text("Welcome to the Capital Kids");
         title.setFont(Font.font("Tahoma", FontWeight.BOLD, 25));
@@ -80,15 +86,20 @@ public class GICGUI extends Application {
 
         HBox hbox = new HBox(20, homeBtn, bankImgBtn, loanImgBtn, stocksBtn, investmentsBtn);
         hbox.setAlignment(Pos.BOTTOM_CENTER);
-        VBox vbox = new VBox(20, title, hbox,imageView, descriptionArea);
+        VBox vbox = new VBox(20, title, hbox,imageView);  // descriptionArea
         vbox.setAlignment(Pos.TOP_CENTER);
 
       
         Scene scene = new Scene(vbox,800,800);
 
+
         primaryStage.setScene(scene);
         primaryStage.setTitle("Capital Kids");
         primaryStage.show();
+
+        //set background
+        vbox.setBackground(background);
+
     }
 
 
