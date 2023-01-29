@@ -137,4 +137,35 @@ hbox.setStyle("-fx-background-color: #FFFFFF;");
                 imageView.setImage(investmentsImg);
         }
     }
+    public static String[] populateUserInfoArray(File fileName) throws FileNotFoundException {
+        int personalFileLength= fileLineCounter(fileName);
+        String[] personalInfoArray = new String[personalFileLength];
+
+        //Takes lines from the file and assigns them to the Array.
+        try (Scanner input = new Scanner(fileName)) {
+            while (input.hasNextLine()) {
+                for (int i = 0; i < personalInfoArray.length; i++) {
+                    personalInfoArray[i] = input.nextLine();
+                }
+            }
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        }
+
+        return personalInfoArray;
+    }
+    public static int fileLineCounter(File files) throws FileNotFoundException {
+        String fileName = files.getName();
+        File file = new File(fileName);
+
+        //Make a while loop to count how many lines a file has
+        Scanner counter = new Scanner(file);
+        int totalFileLine = 0;
+        while (counter.hasNextLine()) {
+            counter.nextLine();
+            totalFileLine += 1;
+        }
+
+        return totalFileLine;
+    }
 }
