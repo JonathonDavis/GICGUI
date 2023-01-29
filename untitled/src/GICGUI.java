@@ -37,14 +37,14 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class GICGUI extends Application {
-    private Image homeImg = new Image("https://img2.10bestmedia.com/Images/Photos/351175/luxury-" +
+    private Image investmentsImg = new Image("https://img2.10bestmedia.com/Images/Photos/351175/luxury-" +
             "family-hotels-thornbury-castle-gloucestershire-stay-deluxe-5_54_990x660.jpg");
     private Image bankImg = new Image("https://i.pinimg.com/originals/87/4e/0d/" +
             "874e0dcac56479ad7e69c2236e68b1a4.jpg");
     private Image loanImg = new Image("https://images.ctfassets.net/iyiurthvosft/featured-img-of-post-201578/c4821aa7795e6fcd5fb3f6f4e47ec89d/featured-img-of-post-201578.jpg?fm=jpg&fl=progressive&q=50&w=1200");
     private Image stocksImg = new Image("https://media.timeout.com/images/105402958/image.jpg");
 
-    private Image investmentsImg = new Image("https://media.thetot.com/wp-content/uploads" +
+    private Image homeImg = new Image("https://media.thetot.com/wp-content/uploads" +
             "/2019/10/29022812/Guidecraft-Hollow-Blocks-Feature.jpg");
     private ImageView imageView = new ImageView(homeImg);
 
