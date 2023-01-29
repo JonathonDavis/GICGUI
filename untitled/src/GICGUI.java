@@ -67,7 +67,13 @@ public class GICGUI extends Application {
         stocksBtn.setOnAction(new ImageChangeHandlerStocks());
         investmentsBtn.setOnAction(new ImageChangeHandlerInvestments());
 
-        
+        homeBtn.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+        bankImgBtn.setBackground(new Background(new BackgroundFill(Color.YELLOW, null , null)));
+        loanImgBtn.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+        stocksBtn.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+        investmentsBtn.setBackground(new Background(new BackgroundFill(Color.YELLOW, null, null)));
+
+
 
         //Create background fill
         BackgroundFill background_fill = new BackgroundFill(Color.LIGHTBLUE, CornerRadii.EMPTY, Insets.EMPTY);
