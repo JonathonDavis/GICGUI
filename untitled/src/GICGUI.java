@@ -83,14 +83,11 @@ public class GICGUI extends Application {
         VBox vbox = new VBox(20, title, hbox,imageView, descriptionArea);
         vbox.setAlignment(Pos.TOP_CENTER);
 
-        //change background color
-        vbox.setStyle("-fx-background-color: #FFFFFF;");
-hbox.setStyle("-fx-background-color: #FFFFFF;");
-
+      
         Scene scene = new Scene(vbox,800,800);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Image Changer");
+        primaryStage.setTitle("Capital Kids");
         primaryStage.show();
     }
 
